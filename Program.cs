@@ -13,6 +13,7 @@ namespace AutoMessEMail
     {
         static byte ProvOutAd(string address)
         {
+            //convert e-mail
             byte j = 0;
             string s = "";
             for(int i=address.Length-1;i>-1;i--)
@@ -65,7 +66,7 @@ namespace AutoMessEMail
             {
                 Errors++;
             }
-            //считываем тему письма
+            //read subject message
             string pathS = "Subject";
             if (File.Exists(pathS))
             {
@@ -75,7 +76,7 @@ namespace AutoMessEMail
             {
                 Errors++;
             }
-            //считываем текст
+            //read text
             string pathMes = "Message.html";
             if (File.Exists(pathMes))
             {
@@ -89,7 +90,7 @@ namespace AutoMessEMail
             {
                 Errors++;
             }
-            //считываем данные адреса отправителя
+            //read e-mail's & password's sender
             string pathMA = "MyAddress";
             if (File.Exists(pathS))
             {
@@ -102,10 +103,11 @@ namespace AutoMessEMail
             }
             if(Errors==0)
             {
-                //
+                //Send message if no errors
                 MailAddress from = new MailAddress(login);
                 MailAddress to; MailMessage m;
                 SmtpClient smtp;
+                //ports
                 switch(ProvOutAd(login))
                 {
                     case 1:
@@ -123,9 +125,7 @@ namespace AutoMessEMail
                 smtp.EnableSsl = true;
                 for(int i=0;i< Addresses.Length;i++)
                 {
-                    //кому отправляем
                     to = new MailAddress(Addresses[i]);
-                    //создаём объект сообщения
                     m = new MailMessage(from, to);
                     m.Subject = subject;
                     m.Body = message;
