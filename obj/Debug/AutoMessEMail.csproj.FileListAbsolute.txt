@@ -1,0 +1,7 @@
+D:\My Git Project\AutoMessEMail\bin\Debug\AutoMessEMail.exe.config
+D:\My Git Project\AutoMessEMail\bin\Debug\AutoMessEMail.exe
+D:\My Git Project\AutoMessEMail\bin\Debug\AutoMessEMail.pdb
+D:\My Git Project\AutoMessEMail\obj\Debug\AutoMessEMail.csprojAssemblyReference.cache
+D:\My Git Project\AutoMessEMail\obj\Debug\AutoMessEMail.csproj.CoreCompileInputs.cache
+D:\My Git Project\AutoMessEMail\obj\Debug\AutoMessEMail.exe
+D:\My Git Project\AutoMessEMail\obj\Debug\AutoMessEMail.pdb
